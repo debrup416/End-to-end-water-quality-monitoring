@@ -15,9 +15,9 @@
 <body>
     
     <div class="container">
-
+        
         <div  class="container">
-            <form   method="POST">
+            <form  action="{% url 'water-predict' %}" method="POST">
                 {% csrf_token %}
                 <fieldset class="form-group">
                     <legend class="border-botton">Water Quality Project Form </legend>
@@ -29,12 +29,17 @@
            
         </div>
         
+        <div class="container">
+            <a href="{% url 'water-predict' %}">Refresh</a>
+        </div>
+        
         {% if ans == 1 %}
             <h1>Great....Water is Purified</h1>
         {% elif ans == 0 %}
             <h1>Oops....Need to Purified</h1>
         {% endif %}
-        <h3>Footer</h3>
+       
+        
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
