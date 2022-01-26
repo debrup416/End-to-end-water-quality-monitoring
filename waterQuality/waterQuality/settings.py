@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-u55ok+smj4go&9jqfyxlz!l^fmy=*#hnx0#(z9fu5%!b$fs+et
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['monitor-water-quality.herokuapp.com']
 
 
 # Application definition
