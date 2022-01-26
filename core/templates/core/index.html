@@ -12,7 +12,7 @@
     <link rel='stylesheet' type="text/css" media="screen" href="{% static 'ui/main.css' %}">
     <title>ML</title>
 </head>
-<body>
+<body style="background-color:#d4f1f9;">
     
     <div class="container">
         
@@ -20,8 +20,8 @@
             <form  action="{% url 'water-predict' %}" method="POST">
                 {% csrf_token %}
                 <fieldset class="form-group">
-                    <legend class="border-botton">Water Quality Project Form </legend>
-                    {{ form|crispy }}
+                    <em><b><legend class="border-botton">Water Quality Project Form </legend></b></em>
+                    <em><b>{{ form|crispy }}</b></em>
                 </fieldset>
                 <input type="submit">
                
